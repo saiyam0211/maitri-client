@@ -1,0 +1,22 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-gray-900 font-['Inter'];
+  }
+}
+
+:root {
+  --primary-color: #DA627D;
+  --secondary-color: #FFA5AB;
+  --background-color: #F9DBBD;
+}
+
+.negative-z-index{
+  z-index: -9999 !important;
+}

@@ -1,0 +1,87 @@
+/* styles/Footer.scss */
+.footer {
+    background-color: var(--theme-elevation-1000);
+    background: linear-gradient(
+      145deg,
+      rgba(218, 98, 125, 1) 0%,
+      rgba(255, 165, 171, 0.9) 100%
+    );
+    position: relative;
+    overflow: hidden;
+    opacity: 1 !important;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(
+          circle at 10% 0%,
+          rgba(249, 219, 189, 0.1) 0%,
+          transparent 50%
+        ),
+        radial-gradient(
+          circle at 90% 100%,
+          rgba(249, 219, 189, 0.1) 0%,
+          transparent 50%
+        );
+      pointer-events: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      padding: 40px 20px;
+    }
+    
+    .social-links {
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .bottom-section {
+      text-align: center;
+      
+      > div {
+        justify-content: center;
+      }
+    }
+  }
+  
+  .link-hover {
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: currentColor;
+      transition: width 0.3s ease;
+    }
+    
+    &:hover::after {
+      width: 100%;
+    }
+  }
+  
+  .social-icon {
+    transition: transform 0.2s ease;
+    
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+  
+  .footer-gradient {
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0)
+    );
+  }
